@@ -72,3 +72,12 @@ yarn-error.log
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+firebaseConfig.js
+.env
+env
+
+# Ignore environment files
+*.env
+
+# Firebase config
+android/app/google-services.jsonbackend/.env

@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 
 const Start = ({navigation}) => {
   useEffect(() => {
@@ -11,14 +11,16 @@ const Start = ({navigation}) => {
   }, []);
 
   const myFunction = () => {
-    navigation.navigate('Home');
+    navigation.navigate('MainScreen');
   };
 
   return (
-    <View style={styles.container}>
+    <TouchableOpacity
+      style={styles.container}
+      onPress={() => navigation.navigate('MainScreen')}>
       <Text style={styles.greeting}>WellCome To</Text>
-      <Text style={styles.greeting2}>Daily Quote</Text>
-    </View>
+      <Text style={styles.greeting2}>Schat</Text>
+    </TouchableOpacity>
   );
 };
 
@@ -27,16 +29,18 @@ export default Start;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f7f7f7',
+    backgroundColor: 'blue',
     alignItems: 'center',
     justifyContent: 'center',
   },
   greeting: {
     fontSize: 25,
-    color: '#4567b7',
+    color: 'white',
+    fontWeight: '700',
   },
   greeting2: {
-    fontSize: 35,
+    fontSize: 40,
     color: '#ff9900',
+    fontWeight: '800',
   },
 });
